@@ -5,10 +5,10 @@ interface Titles {
 }
 
 const titles: Titles = {
-  'tab-github': '取得 GitHub ID、建立 Repo 與 PAT',
-  'tab-cloudflare': '取得 Cloudflare Account ID 與 API Token',
-  'tab-telegram': '建立 Telegram Bot 並取得 Chat ID',
-  'tab-tool': '設定工具 API Key (Felo / Gemini)'
+  'tab-github': 'GitHub 設定',
+  'tab-cloudflare': 'Cloudflare 設定',
+  'tab-telegram': 'Telegram 設定',
+  'tab-tool': 'Tool 設定'
 };
 
 // Theme Toggle
@@ -34,10 +34,9 @@ themeBtn?.addEventListener('click', () => {
   setTheme(isLight);
 });
 
-// Init theme
+// Init theme (Default to Dark)
 const savedTheme = localStorage.getItem('theme');
-const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-setTheme(savedTheme === 'light' || (!savedTheme && prefersLight));
+setTheme(savedTheme === 'light'); // If no saved theme, it will be false (Dark)
 
 // Tab switching
 document.querySelectorAll<HTMLAnchorElement>('.tabs .tab').forEach(tab => {
@@ -65,8 +64,9 @@ document.querySelectorAll<HTMLAnchorElement>('.tabs .tab').forEach(tab => {
 
     // Update UI Text
     const pageTitle = document.getElementById('page-title');
-    if (pageTitle && target in titles) {
-      pageTitle.innerText = titles[target as keyof typeof titles];
+    const titleText = target ? (titles[target as keyof typeof titles]) : null;
+    if (pageTitle && titleText) {
+      pageTitle.innerText = titleText;
     }
   });
 });
@@ -114,7 +114,7 @@ document.querySelectorAll<HTMLElement>('code').forEach(code => {
 // PWA Service Worker Registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then(() => console.log('PWA SW Registered!'))
       .catch(err => console.log('SW Registration failed: ', err));
   });

@@ -10,12 +10,14 @@
 - **離線閱讀 (PWA)**：支援 Service Worker 緩存，無網路狀態下依然可以隨時查閱。
 - **現代化介面**：基於 Vite + TypeScript 構建，具備亮暗模式切換與流暢的動態效果。
 - **極致響應式**：針對行動端優化的導覽區域，支援單手操作與水平滑動頁籤。
+- **Stitch MCP 強化設計**：整合 Google Stitch 設計系統與 MCP 協定，透過原子化設計 (Atomic Design) 提供極致的視覺美學與動態效果。
 - **自動部署**：整合 GitHub Actions，推送至 `main` 分支後自動更新 GitHub Pages 手冊。
 
 ## 🛠️ 開發環境與技術棧
 - **核心架構**：Vite 8+ (TypeScript)
+- **設計協定**：Stitch MCP (Atomic Design Patterns)
 - **Node 環境**：Node.js v24+
-- **樣式系統**：純原生 CSS 變數 + Fluid Typography (clamp)
+- **樣式系統**：純原生 CSS 變數 + Fluid Typography (clamp) + Glassmorphism
 - **部署平台**：GitHub Pages (GitHub Actions)
 
 ## 📦 本地開發指南
