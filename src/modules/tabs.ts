@@ -14,15 +14,11 @@ export function initTabs() {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      // Load content
       const html = tabContents[target] || '<div>內容正在建設中...</div>';
       contentArea.innerHTML = html;
-      
-      // Smooth transition
-      contentArea.style.opacity = '0';
-      setTimeout(() => {
-        contentArea.style.opacity = '1';
-      }, 50);
+      contentArea.classList.remove('tab-content-active');
+      void contentArea.offsetWidth; // Force reflow
+      contentArea.classList.add('tab-content-active');
 
       // Init hooks for loaded content
       initClipboard();

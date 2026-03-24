@@ -9,7 +9,7 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: min(48px, 4vw) max(24px, 4vw);
+  padding: 24px max(24px, 4vw);
   scroll-behavior: smooth;
 }
 
@@ -19,9 +19,10 @@
   max-width: 300px;
   border-right: 1px solid var(--border);
   background: var(--sidebar);
-  padding: 40px 24px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;

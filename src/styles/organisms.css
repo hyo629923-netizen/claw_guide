@@ -1,0 +1,67 @@
+/* Complex Organisms */
+.sidebar-group {
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: 16px;
+  background: var(--group-bg);
+  border: 1px solid var(--border);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: max-height, opacity;
+  flex-shrink: 0;
+}
+
+.sidebar-group.collapsed {
+  overflow: hidden;
+  max-height: 48px;
+}
+
+.sidebar-group.collapsed .group-caret { 
+  transform: rotate(-90deg); 
+}
+
+.sidebar-group.collapsed .tabs {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  pointer-events: none;
+}
+
+.tabs {
+  padding: 4px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 1500px;
+  opacity: 1;
+  overflow: visible;
+}
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 32px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+  flex-shrink: 0;
+}
+
+.card:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25); 
+}
+
+@media (max-width: 860px) {
+  .card { 
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none; 
+    background: var(--bg); 
+  }
+}
