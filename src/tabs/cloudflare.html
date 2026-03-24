@@ -1,0 +1,78 @@
+<div class="card">
+  <div class="step">
+    <div class="num">1</div>
+    <div class="content">
+      <h2>取得 Account ID</h2>
+      <p>進入 Cloudflare Dashboard，切換到本次要部署的帳號，從右上角選單取得 Account ID。</p>
+      <ul>
+        <li>多帳號時請確認已切換到正確的 account。</li>
+      </ul>
+      <div class="image-group">
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">Account ID</p>
+        <img class="figure" src="assets/cloudflare/get-account-id.png" alt="Account ID">
+        <p style="font-size:14px; color:var(--text); margin-top:8px;">從右上角選單點擊「Copy account ID」取得帳號識別碼。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">
+    <div class="num">2</div>
+    <div class="content">
+      <h2>建立 Cloudflare API Token</h2>
+      <p>進入 Cloudflare API Tokens 頁面，依照下方畫面建立 Token。</p>
+      <ul>
+        <li>請使用「Edit Cloudflare Workers」模板作為起點。</li>
+        <li>在 Permissions 區塊按下「Add more」，額外加入 D1 權限後再繼續。</li>
+        <li>確認 Token 綁定的 account 與前一步的 Account ID 一致。</li>
+      </ul>
+      <div style="background: var(--warning-bg); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+        <p style="color:var(--warning); font-size:14px; margin:0; font-weight:500;">
+          ⚠️ 請務必使用「Edit Cloudflare Workers」模板，並在 Permissions 區塊另外補上 D1 權限。若權限不足或設定錯誤，會導致部署失敗。
+        </p>
+      </div>
+      <div class="image-group">
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">API Token 列表頁</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-1.png" alt="API Token 列表頁">
+        <p style="font-size:14px; color:var(--text); margin-bottom:16px;">進入 API Tokens 頁面，點擊「Create Token」。</p>
+
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">選擇 Workers 模板</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-2.png" alt="選擇 Workers 模板">
+        <p style="font-size:14px; color:var(--text); margin-bottom:16px;">選擇「Edit Cloudflare Workers」，點擊「Use template」。</p>
+
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">權限設定</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-3.png" alt="權限設定">
+        <p style="font-size:14px; color:var(--text); margin-bottom:16px;">保留 Workers 預設權限，並按下「Add more」額外加入 D1 權限。</p>
+
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">Account / 資源設定</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-4.png" alt="資源設定">
+        <p style="font-size:14px; color:var(--text); margin-bottom:16px;">在 Account Resources 選擇本次使用的 account。</p>
+
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">建立 Token</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-5.png" alt="建立 Token">
+        <p style="font-size:14px; color:var(--text); margin-bottom:16px;">點擊「Continue to summary」，再按「Create Token」。</p>
+
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">複製 Token</p>
+        <img class="figure" src="assets/cloudflare/create-api-token-6.png" alt="複製 Token">
+        <p style="font-size:14px; color:var(--text);">Token 只會顯示一次，請立即複製並保存。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">
+    <div class="num">3</div>
+    <div class="content">
+      <h2>Workers 初始化</h2>
+      <p>如果你是第一次使用 Cloudflare Workers，請先進入 Workers & Pages 頁面完成初始化。</p>
+      <p>若已看到 subdomain，則代表已完成初始化，可直接跳過此步驟。</p>
+      <div class="image-group">
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">Workers 初始化畫面</p>
+        <img class="figure" src="assets/cloudflare/workers-init.png" alt="Workers 初始化畫面">
+        <p style="font-size:14px; color:var(--text); margin-top:8px;">進入 Workers & Pages 後會自動初始化。</p>
+      </div>
+    </div>
+  </div>
+</div>

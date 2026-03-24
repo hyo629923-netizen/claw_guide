@@ -14,7 +14,7 @@
 - **自動部署**：整合 GitHub Actions，推送至 `main` 分支後自動更新 GitHub Pages 手冊。
 
 ## 🛠️ 開發環境與技術棧
-- **核心架構**：Vite 8+ (TypeScript)
+- **核心架構**：Vite 8+ (TypeScript) + tailwind
 - **設計協定**：Stitch MCP (Atomic Design Patterns)
 - **Node 環境**：Node.js v24+
 - **樣式系統**：純原生 CSS 變數 + Fluid Typography (clamp) + Glassmorphism

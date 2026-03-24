@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,313 +15,93 @@
   <link rel="icon" type="image/png" href="icon.png" />
   <title>Claw Guide — 離線技術手冊</title>
 </head>
+
 <body>
   <div class="wrap" role="document">
     <aside class="sidebar" role="navigation" aria-label="主要導覽">
       <div class="sidebar-header">
-        <h2 class="sidebar-title">Claw Guide</h2>
         <button class="theme-toggle" id="theme-btn" title="切換亮暗模式">
-          <svg class="sun" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="sun" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
+        <h2 class="sidebar-title">Claw Guide</h2>
       </div>
-      <nav class="tabs" aria-label="Guide tabs">
-        <a class="tab active" data-target="tab-github" href="#">GitHub</a>
-        <a class="tab" data-target="tab-cloudflare" href="#">Cloudflare</a>
-        <a class="tab" data-target="tab-telegram" href="#">Telegram</a>
-        <a class="tab" data-target="tab-tool" href="#">Tool</a>
-      </nav>
+      <div class="sidebar-group">
+        <div class="group-header">
+          <span class="group-title-text">概觀</span>
+          <svg class="group-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <nav class="tabs" aria-label="Overview tabs">
+          <a class="tab active" data-target="tab-welcome" href="#">導覽總覽</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-group collapsed">
+        <div class="group-header">
+          <span class="group-title-text">前置作業</span>
+          <svg class="group-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <nav class="tabs" aria-label="Guide tabs">
+          <a class="tab" data-target="tab-github" href="#">GitHub</a>
+          <a class="tab" data-target="tab-cloudflare" href="#">Cloudflare</a>
+          <a class="tab" data-target="tab-telegram" href="#">Telegram</a>
+          <a class="tab" data-target="tab-tool" href="#">Tool</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-group collapsed">
+        <div class="group-header">
+          <span class="group-title-text">龍蝦的家</span>
+          <svg class="group-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <nav class="tabs" aria-label="Lobster tabs">
+          <a class="tab" data-target="tab-lobster" href="#">小龍蝦自我介紹</a>
+          <a class="tab" data-target="tab-update" href="#">更新龍蝦大腦</a>
+        </nav>
+      </div>
     </aside>
 
     <div class="main-content">
-      <h1 id="page-title">GitHub 設定</h1>
-
-      <!-- GitHub Tab -->
-      <section id="tab-github" class="tab-panel">
-        <div class="card">
-          <div class="step">
-            <div class="num">1</div>
-            <div class="content">
-              <h2>取得 GitHub ID</h2>
-              <p>GitHub ID 是你的 GitHub 使用者名稱（Username）。可從個人頁面的網址取得，例如 <code>https://github.com/octocat</code>，其中 octocat 即為 GitHub ID。</p>
-              <ul>
-                <li>登入 GitHub 後，點擊右上角頭像 → 進入「Your profile」。</li>
-                <li>查看瀏覽器網址列，網址最後一段即為 GitHub ID。</li>
-                <li>GitHub ID 欄位只填使用者名稱本身（例如：octocat）。</li>
-                <li>請勿填寫完整網址、Email 或顯示名稱（Name）。</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">2</div>
-            <div class="content">
-              <h2>填寫 Repo name 並選擇建立方式</h2>
-              <p>請輸入你要使用的 Repo name，並選擇要「自行建立」或「交由系統自動建立」。</p>
-              <ul>
-                <li><strong>自行建立：</strong>請參考步驟 3 說明。</li>
-                <li><strong>系統自動建立：</strong>勾選後可直接跳至步驟 4 建立 GitHub PAT。</li>
-              </ul>
-              <p>兩種方式都可以，但此處填寫的 Repo name 必須與最後實際要使用的名稱完全一致。</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">3</div>
-            <div class="content">
-              <h2>自行建立 GitHub Repo</h2>
-              <p>請前往 GitHub 建立 Repo 頁面，依照下方畫面完成設定。</p>
-              <ul>
-                <li>Repository name 必須與表單填寫的名稱完全一致。</li>
-                <li>Visibility 務必設為「Private」，其他選項保持關閉。</li>
-              </ul>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">GitHub Repo 建立圖示 1</p>
-                <img class="figure" src="assets/self-create-repo-1.png" alt="GitHub Repo 建立圖示 1">
-                <p style="font-size:14px; color:var(--text); margin: 8px 0 16px;">確認 Repo 名稱與 Visibility 私有化設定。</p>
-                
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">GitHub Repo 建立圖示 2</p>
-                <img class="figure" src="assets/self-create-repo-2.png" alt="GitHub Repo 建立圖示 2">
-                <p style="font-size:14px; color:var(--text); margin-top:8px;">點擊最下方按鈕完成建立。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">4</div>
-            <div class="content">
-              <h2>建立 GitHub PAT</h2>
-              <p>開啟 Fine-grained PAT 建立頁面（已帶入必要權限），依照下方畫面完成設定後，將產生的 token 複製回此表單。</p>
-              <ul>
-                <li>Repository access 請選擇「Only select repositories」並選取對應 Repo。</li>
-                <li>此連結已帶入必要權限與設定，請勿自行修改（特別是 Permissions 與 Repo access），否則可能導致後續自動化流程失敗。</li>
-              </ul>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">PAT 建立頁面</p>
-                <img class="figure" src="assets/create-pat-1.png" alt="PAT 建立頁面">
-                <p style="font-size:14px; color:var(--text); margin: 8px 0 16px;">確認 Resource owner（帳號）、Repo access 與 Permissions 設定皆正確。</p>
-                
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">建立後複製 token</p>
-                <img class="figure" src="assets/create-pat-2.png" alt="建立後複製 token">
-                <p style="font-size:14px; color:var(--text); margin-top:8px;">建立後僅顯示一次 token，需立即複製保存。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Cloudflare Tab -->
-      <section id="tab-cloudflare" class="tab-panel" style="display:none">
-        <div class="card">
-          <div class="step">
-            <div class="num">1</div>
-            <div class="content">
-              <h2>取得 Account ID</h2>
-              <p>進入 Cloudflare Dashboard，切換到本次要部署的帳號，從右上角選單取得 Account ID。</p>
-              <ul>
-                <li>多帳號時請確認已切換到正確的 account。</li>
-              </ul>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">Account ID</p>
-                <img class="figure" src="assets/get-account-id.png" alt="Account ID">
-                <p style="font-size:14px; color:var(--text); margin-top:8px;">從右上角選單點擊「Copy account ID」取得帳號識別碼。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">2</div>
-            <div class="content">
-              <h2>建立 Cloudflare API Token</h2>
-              <p>進入 Cloudflare API Tokens 頁面，依照下方畫面建立 Token。</p>
-              <ul>
-                <li>請使用「Edit Cloudflare Workers」模板作為起點。</li>
-                <li>在 Permissions 區塊按下「Add more」，額外加入 D1 權限後再繼續。</li>
-                <li>確認 Token 綁定的 account 與前一步的 Account ID 一致。</li>
-              </ul>
-              <div style="background: var(--warning-bg); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
-                <p style="color:var(--warning); font-size:14px; margin:0; font-weight:500;">
-                  ⚠️ 請務必使用「Edit Cloudflare Workers」模板，並在 Permissions 區塊另外補上 D1 權限。若權限不足或設定錯誤，會導致部署失敗。
-                </p>
-              </div>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">API Token 列表頁</p>
-                <img class="figure" src="assets/create-api-token-1.png" alt="API Token 列表頁">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">進入 API Tokens 頁面，點擊「Create Token」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">選擇 Workers 模板</p>
-                <img class="figure" src="assets/create-api-token-2.png" alt="選擇 Workers 模板">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">選擇「Edit Cloudflare Workers」，點擊「Use template」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">權限設定</p>
-                <img class="figure" src="assets/create-api-token-3.png" alt="權限設定">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">保留 Workers 預設權限，並按下「Add more」額外加入 D1 權限。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">Account / 資源設定</p>
-                <img class="figure" src="assets/create-api-token-4.png" alt="資源設定">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">在 Account Resources 選擇本次使用的 account。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">建立 Token</p>
-                <img class="figure" src="assets/create-api-token-5.png" alt="建立 Token">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">點擊「Continue to summary」，再按「Create Token」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">複製 Token</p>
-                <img class="figure" src="assets/create-api-token-6.png" alt="複製 Token">
-                <p style="font-size:14px; color:var(--text);">Token 只會顯示一次，請立即複製並保存。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">3</div>
-            <div class="content">
-              <h2>Workers 初始化（首次使用才需要）</h2>
-              <p>如果你是第一次使用 Cloudflare Workers，請先進入 Workers & Pages 頁面完成初始化。</p>
-              <p>若已看到 subdomain，則代表已完成初始化，可直接跳過此步驟。</p>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">Workers 初始化畫面</p>
-                <img class="figure" src="assets/workers-init.png" alt="Workers 初始化畫面">
-                <p style="font-size:14px; color:var(--text); margin-top:8px;">進入 Workers & Pages 後會自動初始化。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Telegram Tab -->
-      <section id="tab-telegram" class="tab-panel" style="display:none">
-        <div class="card">
-          <div class="step">
-            <div class="num">1</div>
-            <div class="content">
-              <h2>建立 Telegram Bot 並取得 Token</h2>
-              <p>透過 BotFather 建立 bot，並在建立完成後立即取得 Bot Token。</p>
-              <ul>
-                <li>bot username 必須以 <code>bot</code> 結尾（例如：my_claw_bot）。</li>
-                <li>Bot Token 只會顯示一次，請立即複製，切勿公開分享。</li>
-              </ul>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">搜尋 BotFather</p>
-                <img class="figure" src="assets/create-bot-1.png" alt="搜尋 BotFather">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">在 Telegram 搜尋「BotFather」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">建立 Bot</p>
-                <img class="figure" src="assets/create-bot-2.png" alt="建立 Bot">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">點擊「Create a New Bot」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">填寫 Bot 資訊</p>
-                <img class="figure" src="assets/create-bot-3.png" alt="填寫 Bot 資訊">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">輸入 bot 名稱與 username。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">取得 Token</p>
-                <img class="figure" src="assets/create-bot-4.png" alt="取得 Token">
-                <p style="font-size:14px; color:var(--text);">建立完成後，點擊「Copy」取得 Bot Token。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">2</div>
-            <div class="content">
-              <h2>讓 bot 收到訊息並取得 Chat ID</h2>
-              <p>開啟你剛建立的 bot 對話，送出第一則訊息後，回到表單點擊「自動取得 Chat ID」。</p>
-              <div style="background: var(--warning-bg); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
-                <p style="color:var(--text); font-size:14px; margin:0;">
-                  GitHubClaw 是透過 Telegram 的訊息更新紀錄取得 Chat ID。
-                </p>
-              </div>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">開啟 bot 資訊頁</p>
-                <img class="figure" src="assets/get-chat-id-1.png" alt="開啟 bot 資訊頁">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">點擊 bot 的 username。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">開啟 bot 對話</p>
-                <img class="figure" src="assets/get-chat-id-2.png" alt="開啟 bot 對話">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">在 bot 資訊頁中點擊「Message」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">傳送第一則訊息</p>
-                <img class="figure" src="assets/get-chat-id-3.png" alt="傳送第一則訊息">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">第一次進入聊天室時，點擊「START」。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">確認 bot 已收到訊息</p>
-                <img class="figure" src="assets/get-chat-id-5.png" alt="確認 bot 已收到訊息">
-                <p style="font-size:14px; color:var(--text); margin-bottom:16px;">只要聊天室中已經有你送出的訊息即可。</p>
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">自動取得 Chat ID</p>
-                <img class="figure" src="assets/get-chat-id-6.png" alt="自動取得 Chat ID">
-                <p style="font-size:14px; color:var(--text);">回到 GitHubClaw 點擊「自動取得 Chat ID」。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tool Tab -->
-      <section id="tab-tool" class="tab-panel" style="display:none">
-        <div class="card">
-          <div class="step">
-            <div class="num">1</div>
-            <div class="content">
-              <h2>建立 Felo API Key</h2>
-              <p>前往 Felo 官網，依照下方畫面建立 API Key。如果不需要 Felo，可以跳過此步驟。</p>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">開啟 Felo 設定</p>
-                <img class="figure" src="assets/create-felo-api-key-1.png" alt="開啟 Felo 設定">
-                
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">進入 API Keys</p>
-                <img class="figure" src="assets/create-felo-api-key-2.png" alt="進入 API Keys">
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">新建 API Key</p>
-                <img class="figure" src="assets/create-felo-api-key-3.png" alt="新建 API Key">
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">輸入 Key 名稱</p>
-                <img class="figure" src="assets/create-felo-api-key-4.png" alt="Key 名稱">
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">複製 API Key</p>
-                <img class="figure" src="assets/create-felo-api-key-5.png" alt="複製 Token">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="step">
-            <div class="num">2</div>
-            <div class="content">
-              <h2>建立 Gemini API Key</h2>
-              <p>前往 Google AI Studio API Keys 頁面。如果不需要 Gemini，可以跳過此步驟。</p>
-              <div class="image-group">
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">開啟 Gemini API Keys</p>
-                <img class="figure" src="assets/create-gemini-api-key-1.png" alt="AI Studio">
-                
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">建立新 Key</p>
-                <img class="figure" src="assets/create-gemini-api-key-2.png" alt="Create Key">
-
-                <p style="font-size:14px; font-weight:600; color:var(--muted);">複製 API Key</p>
-                <img class="figure" src="assets/create-gemini-api-key-3.png" alt="Copy Key">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <div class="page-header"
+        style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; gap: 20px;">
+        <h1 id="page-title" style="margin: 0;">GitHub 設定</h1>
+        <div id="page-header-addon"></div>
+      </div>
+      <div id="content-area" style="transition: opacity 0.3s ease;">
+        <!-- Loaded dynamically via main.ts -->
+      </div>
     </div> <!-- end main-content -->
   </div> <!-- end wrap -->
   <button class="to-top" id="to-top-btn" title="回到頂部">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
   </button>
   <script type="module" src="./src/main.ts"></script>
 </body>
+
 </html>

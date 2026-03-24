@@ -1,0 +1,85 @@
+@media (max-width: 860px) {
+  body {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .wrap {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 10px 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: var(--bg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+  }
+
+  .sidebar::-webkit-scrollbar { display: none; }
+
+  .sidebar-header { margin: 0; flex-shrink: 0; }
+  .sidebar-title { font-size: 15px; }
+  .theme-toggle { width: 32px; height: 32px; border-radius: 8px; }
+
+  .sidebar-group {
+    margin: 0;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .sidebar-group.collapsed .tabs { display: none; }
+
+  .sidebar-group:not(.collapsed) .tabs {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 200;
+  }
+
+  .group-header {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: var(--group-bg);
+    border: 1px solid var(--border);
+  }
+
+  .group-caret { display: none; }
+  .group-title-text { font-size: 12px; white-space: nowrap; }
+
+  .tabs { gap: 4px; }
+  .tab { padding: 10px 14px; font-size: 14px; white-space: nowrap; border-radius: 8px; }
+  .tab.active { background: rgba(255, 138, 61, 0.15); }
+
+  .main-content { padding: 24px 16px; width: 100%; }
+  .card { padding: 20px; border-radius: 12px; margin-bottom: 16px; }
+  .image-group { padding-left: 10px; }
+  .to-top { bottom: 20px; right: 20px; }
+}

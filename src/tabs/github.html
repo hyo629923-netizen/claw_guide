@@ -1,0 +1,76 @@
+<div class="card">
+  <div class="step">
+    <div class="num">1</div>
+    <div class="content">
+      <h2>取得 GitHub ID</h2>
+      <p>GitHub ID 是你的 GitHub 使用者名稱（Username）。可從個人頁面的網址取得，例如 <code>https://github.com/octocat</code>，其中 octocat 即為 GitHub ID。</p>
+      <ul>
+        <li>登入 GitHub 後，點擊右上角頭像 → 進入「Your profile」。</li>
+        <li>查看瀏覽器網址列，網址最後一段即為 GitHub ID。</li>
+        <li>GitHub ID 欄位只填使用者名稱本身（例如：octocat）。</li>
+        <li>請勿填寫完整網址、Email 或顯示名稱（Name）。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">
+    <div class="num">2</div>
+    <div class="content">
+      <h2>填寫 Repo name 並選擇建立方式</h2>
+      <p>請輸入你要使用的 Repo name，並選擇要「自行建立」或「交由系統自動建立」。</p>
+      <ul>
+        <li><strong>自行建立：</strong>請參考步驟 3 說明。</li>
+        <li><strong>系統自動建立：</strong>勾選後可直接跳至步驟 4 建立 GitHub PAT。</li>
+      </ul>
+      <p>兩種方式都可以，但此處填寫的 Repo name 必須與最後實際要使用的名稱完全一致。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">
+    <div class="num">3</div>
+    <div class="content">
+      <h2>自行建立 GitHub Repo</h2>
+      <p>請前往 GitHub 建立 Repo 頁面，依照下方畫面完成設定。</p>
+      <ul>
+        <li>Repository name 必須與表單填寫的名稱完全一致。</li>
+        <li>Visibility 務必設為「Private」，其他選項保持關閉。</li>
+      </ul>
+      <div class="image-group">
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">GitHub Repo 建立圖示 1</p>
+        <img class="figure" src="assets/github/self-create-repo-1.png" alt="GitHub Repo 建立圖示 1">
+        <p style="font-size:14px; color:var(--text); margin: 8px 0 16px;">確認 Repo 名稱與 Visibility 私有化設定。</p>
+        
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">GitHub Repo 建立圖示 2</p>
+        <img class="figure" src="assets/github/self-create-repo-2.png" alt="GitHub Repo 建立圖示 2">
+        <p style="font-size:14px; color:var(--text); margin-top:8px;">點擊最下方按鈕完成建立。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">
+    <div class="num">4</div>
+    <div class="content">
+      <h2>建立 GitHub PAT</h2>
+      <p>開啟 Fine-grained PAT 建立頁面（已帶入必要權限），依照下方畫面完成設定後，將產生的 token 複製回此表單。</p>
+      <ul>
+        <li>Repository access 請選擇「Only select repositories」並選取對應 Repo。</li>
+        <li>此連結已帶入必要權限與設定，請勿自行修改（特別是 Permissions 與 Repo access），否則可能導致後續自動化流程失敗。</li>
+      </ul>
+      <div class="image-group">
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">PAT 建立頁面</p>
+        <img class="figure" src="assets/github/create-pat-1.png" alt="PAT 建立頁面">
+        <p style="font-size:14px; color:var(--text); margin: 8px 0 16px;">確認 Resource owner（帳號）、Repo access 與 Permissions 設定皆正確。</p>
+        
+        <p style="font-size:14px; font-weight:600; color:var(--muted);">建立後複製 token</p>
+        <img class="figure" src="assets/github/create-pat-2.png" alt="建立後複製 token">
+        <p style="font-size:14px; color:var(--text); margin-top:8px;">建立後僅顯示一次 token，需立即複製保存。</p>
+      </div>
+    </div>
+  </div>
+</div>

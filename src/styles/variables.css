@@ -1,0 +1,40 @@
+:root {
+  /* Atoms: Colors */
+  --bg: #07101a;
+  --muted: #9aa4b2;
+  --accent: #ff8a3d;
+  --card-bg: rgba(15, 23, 32, 0.6);
+  --text: #d1dbe5;
+  --title: #f6fbff;
+  --border: rgba(255, 255, 255, 0.08);
+  --sidebar: rgba(2, 6, 12, 0.4);
+  --card-title: #f0f6ff;
+  --warning: #ffae75;
+  --warning-bg: rgba(255, 138, 61, 0.05);
+  --group-bg: rgba(255, 255, 255, 0.02);
+
+  /* Atoms: Spacing */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-64: 64px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+html.light {
+  --bg: #f8fafc;
+  --muted: #64748b;
+  --accent: #f97316;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text: #334155;
+  --title: #0f172a;
+  --border: rgba(15, 23, 32, 0.1);
+  --sidebar: #ffffff;
+  --card-title: #0f172a;
+  --warning: #c2410c;
+  --warning-bg: #fff7ed;
+  --group-bg: rgba(0, 0, 0, 0.02);
+}
