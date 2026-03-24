@@ -1,0 +1,65 @@
+<div class="card">
+  <h2 style="margin: 0 0 16px; font-size: 22px; font-weight: 800; color: var(--accent);">GitHub Issues：任務的指令中控室</h2>
+  <p style="margin: 0 0 24px; line-height: 1.6; opacity: 0.85;">在小龍蝦的生態系中，GitHub Issue 不只是用來紀錄 Bug，它是 **「通訊軟體」與「自動化工人工坊」** 之間的橋樑。</p>
+  
+  <div class="step">
+    <div class="num">1</div>
+    <div class="content">
+      <h3 style="margin: 0 0 8px; color: var(--title);">任務轉換</h3>
+      <p style="font-size: 14px; opacity: 0.7;">當你對著 Telegram 說話，AI 大腦會分析需求，並透過 GitHub API 在倉庫中建立一則特定的 Issue。</p>
+    </div>
+  </div>
+  
+  <div class="step">
+    <div class="num">2</div>
+    <div class="content">
+      <h3 style="margin: 0 0 8px; color: var(--title);">指令封裝</h3>
+      <ul style="font-size: 14.5px; opacity: 0.8; padding-left: 20px; line-height: 1.8;">
+        <li><strong>Issue 標題：</strong> 定義「哪隻小龍蝦」工作（例如：<code>[爬蟲] 任務名稱</code>）。</li>
+        <li><strong>Issue 內容：</strong> 提供 AI 整理後的結構化參數（如 URL 或關鍵字）。</li>
+        <li><strong>Issue 標籤：</strong> 用來過濾與追蹤進度。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2 style="margin: 0 0 16px; font-size: 22px; font-weight: 800; color: var(--accent);">GitHub Actions：全天候的執行工坊</h2>
+  <p style="margin: 0 0 24px; line-height: 1.6; opacity: 0.85;">GitHub Actions 是真正的「小龍蝦工人」，它們在後端安靜且快速地處理各種繁重任務。</p>
+  
+  <div style="background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+    <p style="margin: 0 0 16px; font-weight: 600; color: var(--title); display: flex; align-items: center; gap: 8px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+      自動化觸發流程
+    </p>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted); line-height: 1.6;">
+      <div style="margin-bottom: 8px;"><span style="color: #ff8a3d;">on:</span></div>
+      <div style="margin-left: 16px;">
+        <span style="color: #ff8a3d;">issues:</span><br>
+        <span style="margin-left: 16px;">types: [opened]</span>
+      </div>
+      <div style="margin: 8px 0;"><span style="color: #ff8a3d;">jobs:</span></div>
+      <div style="margin-left: 16px;">
+        <span style="color: #ff8a3d;">run-lobster:</span><br>
+        <span style="margin-left: 16px; color: #666;"># 檢查標題，決定是否動工</span><br>
+        <span style="margin-left: 16px; color: #ff8a3d;">if:</span> contains(github.event.issue.title, '爬蟲')
+      </div>
+    </div>
+  </div>
+  
+  <div style="margin-top: 24px;">
+    <h3 style="margin: 0 0 12px; color: var(--title); font-size: 16px;">工人的工作特點：</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="padding: 12px; background: rgba(255,138,61,0.05); border-radius: 8px; border: 1px solid rgba(255,138,61,0.1);">
+        <p style="margin: 0; font-weight: 600; color: var(--accent); font-size: 13px;">無須喚醒</p>
+        <p style="margin: 4px 0 0; font-size: 12px; opacity: 0.6;">Issue 一開，Action 立即由 GitHub 分配機器執行。</p>
+      </div>
+      <div style="padding: 12px; background: rgba(0,255,213,0.05); border-radius: 8px; border: 1px solid rgba(0,255,213,0.1);">
+        <p style="margin: 0; font-weight: 600; color: #00ffd5; font-size: 13px;">狀態自動回傳</p>
+        <p style="margin: 4px 0 0; font-size: 12px; opacity: 0.6;">執行結束後，自動將結果留言在 Issue 下方，並傳回通訊軟體。</p>
+      </div>
+    </div>
+  </div>
+</div>

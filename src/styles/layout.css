@@ -19,16 +19,23 @@
   max-width: 300px;
   border-right: 1px solid var(--border);
   background: var(--sidebar);
-  padding: 64px 32px;
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,138,61,0.2) transparent;
 }
+
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,138,61,0.2); border-radius: 4px; }
 
 .sidebar-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   gap: 16px;
 }

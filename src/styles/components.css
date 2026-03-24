@@ -52,32 +52,43 @@
   border-radius: 16px;
   background: var(--group-bg);
   border: 1px solid var(--border);
-  overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sidebar-group.collapsed {
+  overflow: hidden;
+}
+
 .group-header {
-  padding: 14px 18px;
+  padding: 12px 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   user-select: none;
-  transition: 0.2s;
+  transition: all 0.2s ease;
+  border-radius: 12px;
 }
 
-.group-header:hover { background: rgba(255, 255, 255, 0.04); }
+.group-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
 
 .group-title-text {
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--title);
+  letter-spacing: 0.5px;
+  opacity: 0.85;
 }
 
-.group-caret { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); color: var(--muted); opacity: 0.5; }
+.group-caret { 
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  color: var(--muted); 
+  width: 12px;
+  height: 12px;
+  opacity: 0.5; 
+}
 
 .sidebar-group.collapsed .group-caret { transform: rotate(-90deg); }
 
@@ -95,30 +106,31 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 500px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 2000px;
   opacity: 1;
 }
 
 .tab {
-  padding: 14px 20px;
-  border-radius: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
   color: var(--muted);
   background: transparent;
   border: 1px solid transparent;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
-  transition: 0.2s;
+  transition: all 0.2s ease;
+  display: block;
 }
 
-.tab:hover { color: var(--accent); background: rgba(255, 255, 255, 0.02); }
+.tab:hover { color: var(--title); background: rgba(255, 255, 255, 0.03); }
 
 .tab.active {
   color: var(--accent);
-  background: rgba(255, 138, 61, 0.1);
+  font-weight: 600;
+  background: rgba(255, 138, 61, 0.08);
   border: 1px solid rgba(255, 138, 61, 0.2);
-  box-shadow: inset 0 0 20px rgba(255, 138, 61, 0.05);
 }
 
 /* Page Components */
