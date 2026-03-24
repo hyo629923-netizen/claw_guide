@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07101a" />
+  <meta name="description" content="GitHubClaw 離線技術手冊 - 取得 GitHub, Cloudflare, Telegram 等自動化工具的完整部署教學。" />
+  <meta property="og:title" content="GitHubClaw 技術導覽" />
+  <meta property="og:description" content="現代化、極簡且專業的自動化工具部署手冊。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  <title>GitHubClaw 技術導覽 — 離線技術手冊</title>
+</head>
+<body>
+  <div class="wrap" role="document">
+    <aside class="sidebar" role="navigation" aria-label="主要導覽">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">GitHubClaw</h2>
+        <button class="theme-toggle" id="theme-btn" title="切換亮暗模式">
+          <svg class="sun" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+      <nav class="tabs" aria-label="Guide tabs">
+        <a class="tab active" data-target="tab-github" href="#">GitHub</a>
+        <a class="tab" data-target="tab-cloudflare" href="#">Cloudflare</a>
+        <a class="tab" data-target="tab-telegram" href="#">Telegram</a>
+        <a class="tab" data-target="tab-tool" href="#">Tool</a>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <h1 id="page-title">取得 GitHub ID、建立 Repo 與 PAT</h1>
+
+      <!-- Tab Content (Consolidated panels) -->
+      <div id="tab-github" class="tab-panel">
+        <div class="card">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="content">
+              <h2>取得 GitHub ID</h2>
+              <p>GitHub ID 是你的 GitHub 使用者名稱（Username）。可從個人頁面的網址取得，例如 <code>https://github.com/octocat</code>，其中 octocat 即為 GitHub ID。</p>
+              <ul>
+                <li>登入 GitHub 後，點擊右上角頭像 → 進入「Your profile」。</li>
+                <li>查看瀏覽器網址列，網址最後一段即為 GitHub ID。</li>
+              </ul>
+            </div>
+          </div>
+          <hr style="border:none; height:12px; background:transparent;">
+          <div class="step">
+            <div class="num">2</div>
+            <div class="content">
+              <h2>填寫 Repo name 並選擇建立方式</h2>
+              <p>請輸入與表單填寫完全一致的 Repo 名稱。</p>
+            </div>
+          </div>
+          <hr style="border:none; height:12px; background:transparent;">
+          <div class="step">
+            <div class="num">3</div>
+            <div class="content">
+              <h2>建立 GitHub Repo 與 PAT</h2>
+              <p>依照圖示完成 Private Repo 建立與 PAT 權限設定。</p>
+              <div>
+                <img class="figure" src="/assets/create-pat-1.png" alt="PAT 1">
+                <img class="figure" src="/assets/create-pat-2.png" alt="PAT 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-cloudflare" class="tab-panel" style="display:none">
+        <div class="card">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="content">
+              <h2>Cloudflare Account ID</h2>
+              <p>從控制面板取得您的帳號識別碼。</p>
+              <img class="figure" src="/assets/get-account-id.png" alt="Account ID">
+            </div>
+          </div>
+          <hr style="border:none; height:24px; background:transparent;">
+          <div class="step">
+            <div class="num">2</div>
+            <div class="content">
+              <h2>API Token 建立</h2>
+              <p>使用「Edit Cloudflare Workers」模板並加入 D1 權限。</p>
+              <img class="figure" src="/assets/create-api-token-5.png" alt="Token">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-telegram" class="tab-panel" style="display:none">
+        <div class="card">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="content">
+              <h2>Telegram Bot 建立</h2>
+              <p>透過 BotFather 取得 API Token。</p>
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top:16px;">
+                <img class="figure" src="/assets/create-bot-1.png" alt="Bot 1">
+                <img class="figure" src="/assets/create-bot-2.png" alt="Bot 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-tool" class="tab-panel" style="display:none">
+        <div class="card">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="content">
+              <h2>額外 API 設定</h2>
+              <p>設定 Felo 或 Gemini 以強化搜尋與對話能力。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end main-content -->
+  </div> <!-- end wrap -->
+  
+  <button class="to-top" id="to-top-btn" title="回到頂部">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
