@@ -1,3 +1,40 @@
+<div class="card" style="margin-bottom: 32px; border-left: 4px solid var(--stage-2); background: var(--stage-2-bg);">
+  <h2 style="margin: 0 0 12px; font-size: 24px; font-weight: 800; color: var(--stage-2);">階段二：建立通訊與觸發 (ChatOps & Trigger)</h2>
+  <p style="margin: 0; opacity: 0.9; font-size: 15px; line-height: 1.6;">讓你的通訊軟體成為指令發射站。我們將建立 Telegram Bot 並取得必要的 ID，讓小龍蝦能接收你的命令。</p>
+  
+  <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 20px;">
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-2); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-2);"></span>
+        建立 Telegram Bot：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">向 @BotFather 申請一個專屬機器人，並獲取 API Token。</p>
+    </div>
+    
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-2); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-2);"></span>
+        取得專屬 Chat ID：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">這像是一個私人的門牌號碼，確保機器人只回覆你，不理會陌生人的騷擾。</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; background: var(--warning-bg); border: 1px solid var(--border); padding: 20px; border-radius: 12px;">
+    <p style="margin: 0 0 12px; font-weight: 800; color: var(--warning);">⚠️ 注意事項</p>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div>
+        <p style="margin: 0; font-weight: 600; color: var(--stage-2); font-size: 14px;">身分驗證 (Whitelisting)：</p>
+        <p style="margin: 4px 0 0; font-size: 13.5px; opacity: 0.8; line-height: 1.6;">取得 Chat ID 是為了安全。如果你不做 User ID 檢查，任何對機器人說話的人都能控制你的小龍蝦執行任務。</p>
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: 600; color: var(--stage-2); font-size: 14px;">機器人與 GitHub 連動：</p>
+        <p style="margin: 4px 0 0; font-size: 13.5px; opacity: 0.8; line-height: 1.6;">一旦設定完成，你在 Telegram 送出的指令將會透過 Webhook 或轉發機制，最終變成 GitHub 上的 Issue。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="card">
   <div class="step">
     <div class="num">1</div>

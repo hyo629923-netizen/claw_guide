@@ -41,6 +41,18 @@ export function initTabs() {
       const pageHeader = document.querySelector('.page-header') as HTMLElement | null;
       if (pageTitle) {
         pageTitle.innerText = tabTitles[target] ?? '設定';
+        
+        // Match stage color
+        const stageColors: Record<string, string> = {
+          'tab-github': 'var(--stage-1)',
+          'tab-telegram': 'var(--stage-2)',
+          'tab-cloudflare': 'var(--stage-3)',
+          'tab-github-workflow': 'var(--stage-4)',
+          'tab-workflow-diagram': 'var(--stage-4)',
+          'tab-tool': 'var(--stage-5)',
+          'tab-update': 'var(--stage-4)'
+        };
+        pageTitle.style.color = stageColors[target] || 'var(--title)';
       }
       if (pageHeader) {
         pageHeader.style.display = target === 'tab-welcome' ? 'none' : 'flex';

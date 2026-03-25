@@ -1,3 +1,50 @@
+<div class="card" style="margin-bottom: 32px; border-left: 4px solid var(--stage-1); background: var(--stage-1-bg);">
+  <h2 style="margin: 0 0 12px; font-size: 24px; font-weight: 800; color: var(--stage-1);">階段一：建立基地與機密 (Infrastructure & Secrets)</h2>
+  <p style="margin: 0; opacity: 0.9; font-size: 15px; line-height: 1.6;">這是小龍蝦運行的舞台。我們將在 GitHub 建立倉庫並設定存取權限，這是所有工作的基礎。</p>
+  
+  <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 20px;">
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-1); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-1);"></span>
+        GitHub 使用者資訊：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">確認你的身分證，讓系統知道誰是「大海」的主人。</p>
+    </div>
+    
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-1); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-1);"></span>
+        建立 GitHub 倉庫 (Repository)：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">這是一切任務發生的空間，也是小龍蝦的「家」。</p>
+    </div>
+    
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-1); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-1);"></span>
+        個人存取權杖 (PAT)：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">這是小龍蝦代你執行任務的合法授權，請妥善保管。</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; background: var(--warning-bg); border: 1px solid var(--border); padding: 20px; border-radius: 12px;">
+    <p style="margin: 0 0 12px; font-weight: 800; color: var(--warning); display: flex; align-items: center; gap: 6px;">
+      ⚠️ 注意事項
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div>
+        <p style="margin: 0; font-weight: 600; color: var(--stage-1); font-size: 14px;">Token 安全：</p>
+        <p style="margin: 4px 0 0; font-size: 13.5px; opacity: 0.8; line-height: 1.6;">絕對不要洩漏你的 PAT 或 Secrets。一旦 Commit 到公開區域，你的帳號權限可能受損。</p>
+      </div>
+      <div>
+        <p style="margin: 0; font-weight: 600; color: var(--stage-1); font-size: 14px;">最小權限：</p>
+        <p style="margin: 4px 0 0; font-size: 13.5px; opacity: 0.8; line-height: 1.6;">設定 PAT 時，只需選擇必要的 Repositories。不需要給全域存取權限，以保障其他 Repo 的安全。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="card">
   <div class="step">
     <div class="num">1</div>
@@ -70,6 +117,24 @@
         <p style="font-size:14px; font-weight:600; color:var(--muted);">建立後複製 token</p>
         <img class="figure" src="assets/github/create-pat-2.png" alt="建立後複製 token">
         <p style="font-size:14px; color:var(--text); margin-top:8px;">建立後僅顯示一次 token，需立即複製保存。</p>
+      </div>
+
+      <!-- Quick Action Link -->
+      <div style="margin-top: 32px; padding: 24px; background: rgba(59, 130, 246, 0.05); border: 1px dashed rgba(59, 130, 246, 0.3); border-radius: 12px; text-align: center;">
+        <p style="margin: 0 0 16px; font-size: 14px; color: var(--stage-1); font-weight: 600;">快速前往建立頁面 (帶入預設權限)</p>
+        <a href="https://github.com/settings/personal-access-tokens/new?name=GitHubClaw+Worker+Token&description=Bootstrap+repo+scaffold+issues+secrets+and+codespaces&expires_in=30&metadata=read&administration=write&contents=write&actions=write&workflows=write&secrets=write&actions_variables=write&issues=write&codespaces=write&codespaces_lifecycle_admin=write&user_copilot_requests=read" 
+           target="_blank" 
+           style="display: inline-flex; align-items: center; gap: 8px; background: var(--stage-1); color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);"
+           onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(59, 130, 246, 0.4)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.3)';"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          立即建立 GitHub PAT
+        </a>
       </div>
     </div>
   </div>

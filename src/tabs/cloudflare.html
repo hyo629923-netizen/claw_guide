@@ -1,3 +1,44 @@
+<div class="card" style="margin-bottom: 32px; border-left: 4px solid var(--stage-3); background: var(--stage-3-bg);">
+  <h2 style="margin: 0 0 12px; font-size: 24px; font-weight: 800; color: var(--stage-3);">階段三：部署 Webhook 中繼站 (Middleware Setup)</h2>
+  <p style="margin: 0; opacity: 0.9; font-size: 15px; line-height: 1.6;">這是連接通訊軟體與 GitHub 的橋樑。我們使用 Cloudflare Workers 作為中繼，處理身分驗證、自動過濾垃圾訊息，並將合法指令轉發給 GitHub 大腦。</p>
+  
+  <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 20px;">
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-3); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-3);"></span>
+        Cloudflare 帳號資訊：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">取得你的 Account ID，這是識別你邊緣運算空間的唯一代碼。</p>
+    </div>
+    
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-3); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-3);"></span>
+        API Token 與 權限設定：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">透過專屬的 API 權杖授權系統自動部署 Workers 程式碼，需同時具備 Workers 與 D1 資料庫權限。</p>
+    </div>
+
+    <div>
+      <p style="margin: 0; font-weight: 700; color: var(--stage-3); display: flex; align-items: center; gap: 8px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--stage-3);"></span>
+        邊緣運算初始化 (Workers Init)：
+      </p>
+      <p style="margin: 6px 0 0 14px; font-size: 14.5px; opacity: 0.8; line-height: 1.6;">啟動你的雲端空間，準備迎接 24 小時不間斷的中繼轉發服務。</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; background: var(--warning-bg); border: 1px solid var(--border); padding: 20px; border-radius: 12px;">
+    <p style="margin: 0 0 12px; font-weight: 800; color: var(--warning);">⚠️ 注意事項</p>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div>
+        <p style="margin: 0; font-weight: 600; color: var(--stage-3); font-size: 14px;">角色定位：</p>
+        <p style="margin: 4px 0 0; font-size: 13.5px; opacity: 0.8; line-height: 1.6;">Cloudflare 不負擔沉重的計算，它只負責「聽」指令、「過濾」不法使用者，然後「通知」GitHub 小龍蝦。它就像是一個專業的保全與接待處。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="card">
   <div class="step">
     <div class="num">1</div>

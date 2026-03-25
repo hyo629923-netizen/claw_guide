@@ -17,7 +17,18 @@
 </head>
 
 <body>
-  <div class="wrap" role="document">
+  <div id="landing-screen" class="landing-screen">
+    <div class="landing-background">
+      <img src="assets/welcome/AI_Agent_Ocean_Claw.png" alt="AI Agent Ocean Claw">
+    </div>
+    <div class="landing-content">
+      <h2 class="landing-title">GitHubClaw</h2>
+      <p class="landing-subtitle">深海龍蝦與小龍蝦的自動化工坊</p>
+      <button id="enter-btn" class="enter-btn">進入基地 (ENTER)</button>
+    </div>
+  </div>
+
+  <div class="wrap" role="document" style="display: none;">
     <aside class="sidebar" role="navigation" aria-label="主要導覽">
       <div class="sidebar-header">
         <button class="theme-toggle" id="theme-btn" title="切換亮暗模式">
@@ -50,6 +61,7 @@
         </div>
         <nav class="tabs" aria-label="Overview tabs">
           <a class="tab active" data-target="tab-welcome" href="#">深海龍蝦與小龍蝦</a>
+          <a class="tab" data-target="tab-workflow-diagram" href="#">ChatOps 工作流</a>
         </nav>
       </div>
 
